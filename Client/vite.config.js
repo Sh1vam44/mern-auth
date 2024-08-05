@@ -1,6 +1,8 @@
 import { defineConfig, loadEnv, sortUserPlugins } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { plugin } from "mongoose";
+
+import dotenv from "dotenv";
+dotenv.config();
 
 export default defineConfig({
   plugins: [react()],
@@ -13,3 +15,5 @@ export default defineConfig({
     },
   },
 });
+
+// Load environment variables from .env file
